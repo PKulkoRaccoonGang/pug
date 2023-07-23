@@ -1,0 +1,16 @@
+extends layout.pug
+
+//- prepend header
+//- append header
+//-     h2 Subtitle
+
+block content
+  h1= title
+  .d-flex
+    each card in cardData
+      .card.custom-card(style="width: 18rem;")
+        img.card-img-top(src=card.cardImg, alt=card.cardTitle)
+        .card-body
+          h5.card-title #{card.cardTitle}
+          p.card-text #{card.cardText}
+          a.btn.btn-primary(href="#") Go somewhere
